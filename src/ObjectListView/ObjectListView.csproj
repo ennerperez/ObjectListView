@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{609D2CF5-049C-4708-809D-1C0B7BF57A5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrightIdeasSoftware</RootNamespace>
+    <AssemblyName>ObjectListView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\.files\AssemblyInfo.Version.cs">
+      <Link>Properties\AssemblyInfo.Version.cs</Link>
+    </Compile>
+    <Compile Include="CellEditing\CellEditKeyEngine.cs" />
+    <Compile Include="CellEditing\CellEditors.cs" />
+    <Compile Include="CellEditing\EditorRegistry.cs" />
+    <Compile Include="DataListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataTreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DragDrop\DragSource.cs" />
+    <Compile Include="DragDrop\DropSink.cs" />
+    <Compile Include="DragDrop\OLVDataObject.cs" />
+    <Compile Include="FastDataListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FastObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Filtering\Cluster.cs" />
+    <Compile Include="Filtering\ClusteringStrategy.cs" />
+    <Compile Include="Filtering\ClustersFromGroupsStrategy.cs" />
+    <Compile Include="Filtering\DateTimeClusteringStrategy.cs" />
+    <Compile Include="Filtering\FilterMenuBuilder.cs" />
+    <Compile Include="Filtering\Filters.cs" />
+    <Compile Include="Filtering\FlagClusteringStrategy.cs" />
+    <Compile Include="Filtering\ICluster.cs" />
+    <Compile Include="Filtering\IClusteringStrategy.cs" />
+    <Compile Include="Filtering\TextMatchFilter.cs" />
+    <Compile Include="Implementation\Attributes.cs" />
+    <Compile Include="Implementation\Comparers.cs" />
+    <Compile Include="Implementation\DataSourceAdapter.cs" />
+    <Compile Include="Implementation\Delegates.cs" />
+    <Compile Include="Implementation\DragSource.cs" />
+    <Compile Include="Implementation\DropSink.cs" />
+    <Compile Include="Implementation\Enums.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Implementation\Events.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Implementation\GroupingParameters.cs" />
+    <Compile Include="Implementation\Groups.cs" />
+    <Compile Include="Implementation\Munger.cs" />
+    <Compile Include="Implementation\NativeMethods.cs" />
+    <Compile Include="Implementation\NullableDictionary.cs" />
+    <Compile Include="Implementation\OLVListItem.cs" />
+    <Compile Include="Implementation\OLVListSubItem.cs" />
+    <Compile Include="Implementation\OlvListViewHitTestInfo.cs" />
+    <Compile Include="Implementation\TreeDataSourceAdapter.cs" />
+    <Compile Include="Implementation\VirtualGroups.cs" />
+    <Compile Include="Implementation\VirtualListDataSource.cs" />
+    <Compile Include="ObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView.DesignTime.cs" />
+    <Compile Include="OLVColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Rendering\Adornments.cs" />
+    <Compile Include="Rendering\Decorations.cs" />
+    <Compile Include="Rendering\Overlays.cs" />
+    <Compile Include="Rendering\Renderers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rendering\Styles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rendering\TreeRenderer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubControls\GlassPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubControls\HeaderControl.cs" />
+    <Compile Include="SubControls\ToolStripCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubControls\ToolTipControl.cs" />
+    <Compile Include="TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\ColumnSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\ColumnSelectionForm.Designer.cs">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Generator.cs" />
+    <Compile Include="Utilities\OLVExporter.cs" />
+    <Compile Include="Utilities\TypedObjectListView.cs" />
+    <Compile Include="VirtualObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Utilities\ColumnSelectionForm.resx">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomDictionary.xml" />
+    <Content Include="Resources\clear-filter.png" />
+    <Content Include="Resources\coffee.jpg" />
+    <Content Include="Resources\filter-icons3.png" />
+    <Content Include="Resources\filter.png" />
+    <Content Include="Resources\sort-ascending.png" />
+    <Content Include="Resources\sort-descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FullClassDiagram.cd" />
+    <None Include="Package.nuspec" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

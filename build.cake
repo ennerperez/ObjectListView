@@ -16,8 +16,15 @@ var solutions = new Dictionary<string, string> {
 };
 
 // Define directories.
-var outputDirectory = "../build/" + configuration;
-var buildDir = Directory("../" + outputDirectory);
+var buildDir = Directory("./build") + Directory(configuration);
+
+// Define AssemblyInfo source.
+var assemblyInfoVersion = ParseAssemblyInfo("./src/.files/AssemblyInfo.Version.cs");
+
+// Define version.
+var ticks = DateTime.Now.ToString("ddHHmmss");
+var assemblyVersion = assemblyInfoVersion.AssemblyVersion.Replace(".*", "." + ticks.Substring(ticks.Length-8,8));
+var version = EnvironmentVariable("APPVEYOR_BUILD_VERSION") ?? Argument("version", assemblyVersion);
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -47,27 +54,37 @@ Task("Build")
 {
     foreach (var solution in solutions)
     {
-        if (IsRunningOnWindows())
-        {
-            var settings = new MSBuildSettings()
-			      .WithProperty("OutDir", buildDir);
-            // .WithProperty("PackageVersion", version)
-            // .WithProperty("BuildSymbolsPackage", "false");
-            settings.SetConfiguration(configuration);
-            // Use MSBuild
-            MSBuild(solution.Key, settings);
-        }
-        else
-        {
-            var settings = new XBuildSettings()
-			      .WithProperty("OutDir", buildDir);
-            // .WithProperty("PackageVersion", version)
-            // .WithProperty("BuildSymbolsPackage", "false");
-            settings.SetConfiguration(configuration);
-            // Use XBuild
-            XBuild(solution.Key, settings);
-        }
+        var settings = new MSBuildSettings();
+        settings.SetConfiguration(configuration);
+        MSBuild(solution.Key, settings);
     }
+});
+
+Task("Build-NuGet-Packages")
+    .Does(() =>
+    {
+        foreach (var folder in new System.IO.FileInfo(solutions.ElementAt(0).Key).Directory.GetDirectories())
+        {
+            foreach (var file in folder.GetFiles("*.nuspec"))
+            {
+        		var path = file.Directory;
+                var assemblyInfo = ParseAssemblyInfo(path + "/Properties/AssemblyInfo.cs");
+                var nuGetPackSettings = new NuGetPackSettings()
+                {
+                    OutputDirectory = buildDir,
+                    IncludeReferencedProjects = false,
+                    //Id = assemblyInfo.Title.Replace(" ", "."),
+                    //Title = assemblyInfo.Title,
+                    Version = version,
+                    //Authors = new[] { assemblyInfoCommon.Company },
+                    //Summary = assemblyInfo.Description,
+                    //Copyright = assemblyInfoCommon.Copyright,
+                    Properties = new Dictionary<string, string>()
+                    {{ "Configuration", configuration }}
+                };
+                NuGetPack(file.FullName, nuGetPackSettings);
+            }
+        }
 });
 
 Task("Run-Unit-Tests")
@@ -84,7 +101,8 @@ Task("Run-Unit-Tests")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-    .IsDependentOn("Run-Unit-Tests");
+    .IsDependentOn("Run-Unit-Tests")
+    .IsDependentOn("Build-NuGet-Packages");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
