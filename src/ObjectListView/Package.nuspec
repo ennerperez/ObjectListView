@@ -19,7 +19,9 @@
     <repository type="git" url="https://github.com/ennerperez/ObjectListView" />
     <dependencies>
       <group targetFramework=".NETFramework4.0" />
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Drawing.Common" version="4.7.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>
