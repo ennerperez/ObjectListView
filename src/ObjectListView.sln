@@ -20,19 +20,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectListView.NetCore", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListViewDemo", "ObjectListViewDemo\ObjectListViewDemo.csproj", "{6C098288-075B-4083-9B53-6E94FFCD50C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectListViewDemo.NetCore", "ObjectListViewDemo.NetCore\ObjectListViewDemo.NetCore.csproj", "{B1A8F19D-D299-4C57-90BF-B001525C3152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectListViewDemo.NetCore", "ObjectListViewDemo.NetCore\ObjectListViewDemo.NetCore.csproj", "{B1A8F19D-D299-4C57-90BF-B001525C3152}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{DD4EAE51-6E46-4B5E-924A-E2C75037C4E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewPrinter", "ListViewPrinter\ListViewPrinter.csproj", "{6D9AD07B-0286-4082-BC30-7706FB6E601F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewPrinter.NetCore", "ListViewPrinter.NetCore\ListViewPrinter.NetCore.csproj", "{564C996E-4AE7-4270-A04D-203273986A1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListViewPrinter.NetCore", "ListViewPrinter.NetCore\ListViewPrinter.NetCore.csproj", "{564C996E-4AE7-4270-A04D-203273986A1B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{E3F00174-C029-4C5C-9554-5F57326B22FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkleLibrary", "SparkleLibrary\SparkleLibrary.csproj", "{D304B8BF-0D7A-4CDD-A50B-7FCD9A437496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkleLibrary.NetCore", "SparkleLibrary.NetCore\SparkleLibrary.NetCore.csproj", "{1486AF93-F02C-4B71-BBC9-C76654EBAE02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkleLibrary.NetCore", "SparkleLibrary.NetCore\SparkleLibrary.NetCore.csproj", "{1486AF93-F02C-4B71-BBC9-C76654EBAE02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{7EA29E9E-A450-41EF-8AE7-88058A3FD27E}"
+	ProjectSection(SolutionItems) = preProject
+		.files\AssemblyInfo.Version.cs = .files\AssemblyInfo.Version.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +82,7 @@ Global
 		{564C996E-4AE7-4270-A04D-203273986A1B} = {DD4EAE51-6E46-4B5E-924A-E2C75037C4E5}
 		{D304B8BF-0D7A-4CDD-A50B-7FCD9A437496} = {E3F00174-C029-4C5C-9554-5F57326B22FC}
 		{1486AF93-F02C-4B71-BBC9-C76654EBAE02} = {E3F00174-C029-4C5C-9554-5F57326B22FC}
+		{7EA29E9E-A450-41EF-8AE7-88058A3FD27E} = {F2848700-C8F6-419E-9D2A-FF3590CA7AFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5562d2e8-7406-4238-98ae-140e65c62f1a}
