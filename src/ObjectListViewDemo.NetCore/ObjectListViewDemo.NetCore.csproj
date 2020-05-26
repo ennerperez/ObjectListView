@@ -1,0 +1,180 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ObjectListViewDemo</RootNamespace>
+    <Deterministic>false</Deterministic>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>ObjectListViewDemo</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\.files\AssemblyInfo.Version.cs" Link="Properties\AssemblyInfo.Version.cs" />
+    <Compile Include="..\ObjectListViewDemo\AnimatedDecoration.cs" Link="AnimatedDecoration.cs" />
+    <Compile Include="..\ObjectListViewDemo\BusinessCardOverlay.cs" Link="BusinessCardOverlay.cs" />
+    <Compile Include="..\ObjectListViewDemo\BusinessCardRenderer.cs" Link="BusinessCardRenderer.cs" />
+    <Compile Include="..\ObjectListViewDemo\ColumnSelectionForm.cs" Link="ColumnSelectionForm.cs" />
+    <Compile Include="..\ObjectListViewDemo\ColumnSelectionForm.Designer.cs" Link="ColumnSelectionForm.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\MainForm.cs" Link="MainForm.cs" />
+    <Compile Include="..\ObjectListViewDemo\MainForm.Designer.cs" Link="MainForm.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\Models\MaritalStatus.cs" Link="Models\MaritalStatus.cs" />
+    <Compile Include="..\ObjectListViewDemo\Models\MyFileSystemInfo.cs" Link="Models\MyFileSystemInfo.cs" />
+    <Compile Include="..\ObjectListViewDemo\Models\Person.cs" Link="Models\Person.cs" />
+    <Compile Include="..\ObjectListViewDemo\MyFileSystemInfo.cs" Link="MyFileSystemInfo.cs" />
+    <Compile Include="..\ObjectListViewDemo\OLVDemoCoordinator.cs" Link="OLVDemoCoordinator.cs" />
+    <Compile Include="..\ObjectListViewDemo\OlvDemoTab.cs" Link="OlvDemoTab.cs" />
+    <Compile Include="..\ObjectListViewDemo\Person.cs" Link="Person.cs" />
+    <Compile Include="..\ObjectListViewDemo\Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\ObjectListViewDemo\Properties\Resources.Designer.cs" Link="Properties\Resources.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\Resource1.Designer.cs" Link="Resource1.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\ShellUtilities.cs" Link="ShellUtilities.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabComplexExample.cs" Link="TabComplexExample.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabComplexExample.Designer.cs" Link="TabComplexExample.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDataSet.cs" Link="TabDataSet.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDataSet.Designer.cs" Link="TabDataSet.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDataTreeListView.cs" Link="TabDataTreeListView.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDataTreeListView.Designer.cs" Link="TabDataTreeListView.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDescribedTask.cs" Link="TabDescribedTask.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDescribedTask.Designer.cs" Link="TabDescribedTask.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDragAndDrop.cs" Link="TabDragAndDrop.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabDragAndDrop.Designer.cs" Link="TabDragAndDrop.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabFastList.cs" Link="TabFastList.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabFastList.Designer.cs" Link="TabFastList.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabFileExplorer.cs" Link="TabFileExplorer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabFileExplorer.Designer.cs" Link="TabFileExplorer.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabPrinting.cs" Link="TabPrinting.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabPrinting.Designer.cs" Link="TabPrinting.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabSimpleExample.cs" Link="TabSimpleExample.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabSimpleExample.Designer.cs" Link="TabSimpleExample.Designer.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabTreeListView.cs" Link="TabTreeListView.cs" />
+    <Compile Include="..\ObjectListViewDemo\TabTreeListView.Designer.cs" Link="TabTreeListView.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\3dlink1.gif" Link="AnimatedGifs\3dlink1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\cd1.gif" Link="AnimatedGifs\cd1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\circum.gif" Link="AnimatedGifs\circum.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\cool3.gif" Link="AnimatedGifs\cool3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\enter3.gif" Link="AnimatedGifs\enter3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\envelope.gif" Link="AnimatedGifs\envelope.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\exclame.gif" Link="AnimatedGifs\exclame.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\eye2.gif" Link="AnimatedGifs\eye2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\net2.gif" Link="AnimatedGifs\net2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\AnimatedGifs\new5.gif" Link="AnimatedGifs\new5.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Data\FamilyTree.xml" Link="Data\FamilyTree.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Data\Persons.xml" Link="Data\Persons.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\ak.png" Link="Photos\ak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\cp.png" Link="Photos\cp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\cr.png" Link="Photos\cr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\es.png" Link="Photos\es.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\gab.png" Link="Photos\gab.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\gp.png" Link="Photos\gp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\jp.png" Link="Photos\jp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\jr.png" Link="Photos\jr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\mb.png" Link="Photos\mb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\np.png" Link="Photos\np.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\ns.png" Link="Photos\ns.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\sj.png" Link="Photos\sj.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Photos\sp.png" Link="Photos\sp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ObjectListViewDemo\Resources\coffee.jpg" Link="Resources\coffee.jpg" />
+    <Content Include="..\ObjectListViewDemo\Resources\down16.png" Link="Resources\down16.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\Espresso Maker.ico" Link="Resources\Espresso Maker.ico" />
+    <Content Include="..\ObjectListViewDemo\Resources\fav32.png" Link="Resources\fav32.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\folder16.png" Link="Resources\folder16.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\goldstar3.png" Link="Resources\goldstar3.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\goldstart-32.png" Link="Resources\goldstart-32.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\limeleaf.png" Link="Resources\limeleaf.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\movie16.png" Link="Resources\movie16.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\music16.png" Link="Resources\music16.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\redback1.png" Link="Resources\redback1.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\redbull.png" Link="Resources\redbull.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\star16.png" Link="Resources\star16.png" />
+    <Content Include="..\ObjectListViewDemo\Resources\tick16.png" Link="Resources\tick16.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\ObjectListViewDemo\ColumnSelectionForm.resx" Link="ColumnSelectionForm.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\MainForm.resx" Link="MainForm.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\Properties\Resources.resx" Link="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\ObjectListViewDemo\Resource1.resx" Link="Resource1.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabComplexExample.resx" Link="TabComplexExample.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabDataSet.resx" Link="TabDataSet.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabDataTreeListView.resx" Link="TabDataTreeListView.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabDescribedTask.resx" Link="TabDescribedTask.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabDragAndDrop.resx" Link="TabDragAndDrop.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabFastList.resx" Link="TabFastList.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabFileExplorer.resx" Link="TabFileExplorer.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabPrinting.resx" Link="TabPrinting.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabSimpleExample.resx" Link="TabSimpleExample.resx" />
+    <EmbeddedResource Include="..\ObjectListViewDemo\TabTreeListView.resx" Link="TabTreeListView.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ListViewPrinter.NetCore\ListViewPrinter.NetCore.csproj" />
+    <ProjectReference Include="..\ObjectListView.NetCore\ObjectListView.NetCore.csproj" />
+    <ProjectReference Include="..\SparkleLibrary.NetCore\SparkleLibrary.NetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AnimatedGifs\" />
+    <Folder Include="Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Photos\" />
+  </ItemGroup>
+</Project>

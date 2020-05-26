@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Deterministic>false</Deterministic>
+    <RootNamespace>BrightIdeasSoftware</RootNamespace>
+    <AssemblyName>SparkleLibrary</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\.files\AssemblyInfo.Version.cs" Link="Properties\AssemblyInfo.Version.cs" />
+    <Compile Include="..\SparkleLibrary\Adapters\AnimationAdapter.cs" Link="Adapters\AnimationAdapter.cs" />
+    <Compile Include="..\SparkleLibrary\Animation\Animateable.cs" Link="Animation\Animateable.cs" />
+    <Compile Include="..\SparkleLibrary\Animation\Animation.cs" Link="Animation\Animation.cs" />
+    <Compile Include="..\SparkleLibrary\Animation\Events.cs" Link="Animation\Events.cs" />
+    <Compile Include="..\SparkleLibrary\Effects\Effect.cs" Link="Effects\Effect.cs" />
+    <Compile Include="..\SparkleLibrary\Effects\Effects.cs" Link="Effects\Effects.cs" />
+    <Compile Include="..\SparkleLibrary\Locators\Locators.cs" Link="Locators\Locators.cs" />
+    <Compile Include="..\SparkleLibrary\Locators\PointLocator.cs" Link="Locators\PointLocator.cs" />
+    <Compile Include="..\SparkleLibrary\Locators\RectangleLocator.cs" Link="Locators\RectangleLocator.cs" />
+    <Compile Include="..\SparkleLibrary\Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\Audio.cs" Link="Sprites\Audio.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\ImageSprite.cs" Link="Sprites\ImageSprite.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\ISprite.cs" Link="Sprites\ISprite.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\ShapeSprite.cs" Link="Sprites\ShapeSprite.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\Sprite.cs" Link="Sprites\Sprite.cs" />
+    <Compile Include="..\SparkleLibrary\Sprites\TextSprite.cs" Link="Sprites\TextSprite.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Adapters\" />
+    <Folder Include="Animation\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Locators\" />
+    <Folder Include="Sprites\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+</Project>
